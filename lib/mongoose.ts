@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
-import db from '@/configs/config.mongodb';
-const { host, port, name } = db;
+import config from '@/configs/config.mongodb';
+const { host, port, name } = config.db;
 const connectString = `mongodb://${host}:${port}/${name}`;
 const env = process.env.NODE_ENV || 'dev';
 
